@@ -105,6 +105,60 @@
                 max-width: 300px;
             }
         }
+
+        /* Image Carousel Styles */
+        .image-carousel {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .image-carousel[style*="height"] {
+            height: 100%;
+        }
+
+        .carousel-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .carousel-image[style*="height"] {
+            height: 100%;
+        }
+
+        .carousel-image.active {
+            opacity: 1;
+            position: relative;
+        }
+
+        .carousel-indicators {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+            z-index: 10;
+        }
+
+        .carousel-indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-indicator.active {
+            background: white;
+            width: 24px;
+            border-radius: 4px;
+        }
     </style>
 </head>
 
@@ -574,8 +628,16 @@
 
                 <!-- Project 3 -->
                 <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
-                    <img src="what_we_do/data_center_installation.jpg" alt="Data Centre"
-                        class="w-full h-48 object-cover">
+                    <div class="image-carousel w-full h-48 relative">
+                        <img src="what_we_do/data_center_installation.jpg" alt="Data Centre"
+                            class="carousel-image active w-full h-full object-cover" data-carousel="data-center">
+                        <img src="what_we_do/data_center_installation2.jpg" alt="Data Centre"
+                            class="carousel-image w-full h-full object-cover" data-carousel="data-center">
+                        <div class="carousel-indicators">
+                            <span class="carousel-indicator active" data-carousel="data-center" data-index="0"></span>
+                            <span class="carousel-indicator" data-carousel="data-center" data-index="1"></span>
+                        </div>
+                    </div>
                     <div class="p-6">
                         <div class="flex items-center mb-2">
                             <span
@@ -1315,6 +1377,72 @@
             }
         `;
         document.head.appendChild(style);
+
+        // Image Carousel Auto-Rotation
+        function initImageCarousels() {
+            const carousels = {};
+            const carouselElements = document.querySelectorAll('[data-carousel]');
+
+            // Group images by carousel name
+            carouselElements.forEach(element => {
+                const carouselName = element.getAttribute('data-carousel');
+                if (!carousels[carouselName]) {
+                    carousels[carouselName] = {
+                        images: [],
+                        indicators: [],
+                        currentIndex: 0
+                    };
+                }
+
+                if (element.classList.contains('carousel-image')) {
+                    carousels[carouselName].images.push(element);
+                } else if (element.classList.contains('carousel-indicator')) {
+                    carousels[carouselName].indicators.push(element);
+                }
+            });
+
+            // Initialize each carousel
+            Object.keys(carousels).forEach(carouselName => {
+                const carousel = carousels[carouselName];
+
+                function showImage(index) {
+                    // Hide all images
+                    carousel.images.forEach((img, i) => {
+                        img.classList.remove('active');
+                        if (i === index) {
+                            img.classList.add('active');
+                        }
+                    });
+
+                    // Update indicators
+                    carousel.indicators.forEach((indicator, i) => {
+                        indicator.classList.toggle('active', i === index);
+                    });
+
+                    carousel.currentIndex = index;
+                }
+
+                // Auto-rotate every 5 seconds
+                setInterval(() => {
+                    const nextIndex = (carousel.currentIndex + 1) % carousel.images.length;
+                    showImage(nextIndex);
+                }, 5000);
+
+                // Allow manual navigation via indicators
+                carousel.indicators.forEach((indicator, index) => {
+                    indicator.addEventListener('click', () => {
+                        showImage(index);
+                    });
+                });
+            });
+        }
+
+        // Initialize carousels when DOM is loaded
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initImageCarousels);
+        } else {
+            initImageCarousels();
+        }
     </script>
 </body>
 
