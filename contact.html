@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Fortune Three Engineers</title>
+    <meta name="description"
+        content="Get in touch with Fortune Three Engineers. Contact us for engineering solutions, project inquiries, or general information.">
+    
+    <!-- Preconnect to external domains for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="images/logo/logo.png" as="image">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts - Nunito with display=swap for better performance -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="smooth-scroll bg-gray-50">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-50 bg-white shadow-md transition-all duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24 md:h-20 py-2">
+                <!-- Logo -->
+                <div class="flex items-center flex-shrink-0">
+                    <a href="index.html" class="flex items-center">
+                        <img src="images/logo/logo.png" alt="Fortune Three Engineers Logo" class="logo-img" loading="eager" width="200" height="70">
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#home" class="text-gray-700 hover:text-red-600 font-medium transition">Home</a>
+                    <a href="index.html#about" class="text-gray-700 hover:text-red-600 font-medium transition">About</a>
+                    <a href="index.html#services" class="text-gray-700 hover:text-red-600 font-medium transition">Services</a>
+                    <a href="projects.html" class="text-gray-700 hover:text-red-600 font-medium transition">Projects</a>
+                    <a href="team.html" class="text-gray-700 hover:text-red-600 font-medium transition">Team</a>
+                    <a href="contact.html"
+                        class="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition font-medium border-b-2 border-red-600">Contact
+                        Us</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-4 space-y-3">
+                <a href="index.html#home" class="block text-gray-700 hover:text-red-600 font-medium py-2">Home</a>
+                <a href="index.html#about" class="block text-gray-700 hover:text-red-600 font-medium py-2">About</a>
+                <a href="index.html#services" class="block text-gray-700 hover:text-red-600 font-medium py-2">Services</a>
+                <a href="projects.html" class="block text-gray-700 hover:text-red-600 font-medium py-2">Projects</a>
+                <a href="team.html" class="block text-gray-700 hover:text-red-600 font-medium py-2">Team</a>
+                <a href="contact.html"
+                    class="block bg-red-600 text-white px-6 py-2 rounded-full text-center font-medium">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Header -->
+    <section class="hero-pattern pt-36 pb-20 md:pt-40 md:pb-32">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                    Get In <span class="text-gradient">Touch</span>
+                </h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section-padding bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Contact Information -->
+                <div>
+                    <div class="bg-white rounded-xl p-6 shadow-lg mb-4">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Contact Information</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div
+                                    class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-map-marker-alt text-red-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-1">Address</h4>
+                                    <p class="text-gray-600">No: 2238 Arlington Estate<br>Hatfield, Harare<br>Zimbabwe
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div
+                                    class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-phone text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-1">Phone</h4>
+                                    <p class="text-gray-600">+263 242 301 279<br>+263 773 436 391</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div
+                                    class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-envelope text-teal-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-1">Email</h4>
+                                    <p class="text-gray-600">trymore@fortunethreeengineers.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Banking Details -->
+                    <div class="bg-white rounded-xl p-6 shadow-lg">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Banking Details</h3>
+                        <div class="space-y-2 text-xs">
+                            <p><strong>Bank:</strong> FBC</p>
+                            <p><strong>Account Name:</strong> Fortune Three Engineering Pvt Ltd</p>
+                            <p><strong>Account (ZWL):</strong> 1496047350135</p>
+                            <p><strong>Account (USD):</strong> 5196047350236</p>
+                            <p><strong>Branch:</strong> Borrowdale</p>
+                            <p><strong>Branch Code:</strong> 8127</p>
+                            <p><strong>Swift Code:</strong> FBCPZWHA</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-white rounded-xl p-6 shadow-lg">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Send Us a Message</h3>
+                    <form id="contact-form" class="space-y-4" onsubmit="handleFormSubmit(event)">
+                        <div>
+                            <label for="name" class="block text-gray-700 font-semibold mb-1.5 text-sm">Full Name</label>
+                            <input type="text" id="name" name="name"
+                                class="w-full px-3 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent transition text-sm"
+                                placeholder="John Doe" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 font-semibold mb-1.5 text-sm">Email Address</label>
+                            <input type="email" id="email" name="email"
+                                class="w-full px-3 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent transition text-sm"
+                                placeholder="john@example.com" required>
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-gray-700 font-semibold mb-1.5 text-sm">Phone Number</label>
+                            <input type="tel" id="phone" name="phone"
+                                class="w-full px-3 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent transition text-sm"
+                                placeholder="+263 77 123 4567">
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-gray-700 font-semibold mb-1.5 text-sm">Subject</label>
+                            <input type="text" id="subject" name="subject"
+                                class="w-full px-3 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent transition text-sm"
+                                placeholder="Project Inquiry" required>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 font-semibold mb-1.5 text-sm">Message</label>
+                            <textarea id="message" name="message" rows="4"
+                                class="w-full px-3 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent transition resize-none text-sm"
+                                placeholder="Tell us about your project..." required></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition shadow-lg transform hover:scale-105 text-sm">
+                            <i class="fas fa-paper-plane mr-2"></i>Send Message
+                        </button>
+                        <div id="form-message" class="hidden mt-4 p-4 rounded-lg"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="mb-4">
+                        <img src="images/logo/logo.png" alt="Fortune Three Engineers Logo" class="logo-img-footer" loading="lazy" width="200" height="80">
+                    </div>
+                    <p class="text-gray-400 text-sm mb-4">
+                        Engineering Pace Setters. Building Zimbabwe's infrastructure future with excellence, innovation,
+                        and integrity.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="index.html#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="projects.html" class="text-gray-400 hover:text-white transition">Projects</a></li>
+                        <li><a href="team.html" class="text-gray-400 hover:text-white transition">Our Team</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Our Services</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li>Electrical Engineering</li>
+                        <li>Mechanical Engineering</li>
+                        <li>Civil & Structural Engineering</li>
+                        <li>Renewable Energy</li>
+                        <li>Telecommunications</li>
+                        <li>Data Centres</li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact Us</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mr-3 mt-1 text-red-600"></i>
+                            <span>No: 2238 Arlington Estate<br>Hatfield, Harare<br>Zimbabwe</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-red-600"></i>
+                            <span>+263 242 301 279</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-mobile-alt mr-3 text-red-600"></i>
+                            <span>+263 773 436 391</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-red-600"></i>
+                            <span>trymore@fortunethreeengineers.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 mt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                        &copy; 2025 Fortune Three Engineers (Pvt) Ltd. All rights reserved.
+                    </p>
+                </div>
+                <div class="mt-4 text-center text-sm text-gray-500">
+                    <p>Company Registration: 9920/2012 | VAT: 220356870 | TIN: 2000923034</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top"
+        class="fixed bottom-8 right-8 w-12 h-12 bg-red-600 text-white rounded-full shadow-lg hover:bg-red-700 transition opacity-0 invisible z-50 flex items-center justify-center">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Custom JavaScript -->
+    <script src="js/script.js" defer></script>
+</body>
+
+</html>
+
