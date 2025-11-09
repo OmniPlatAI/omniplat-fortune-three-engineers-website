@@ -110,10 +110,10 @@
                         </a>
                     </div>
                 </div>
-                <div class="hidden md:block">
+                <div class="hidden md:block image-container rounded-2xl">
                     <img src="images/hero_section/hero.jpg" alt="Engineering Excellence"
-                        class="rounded-2xl shadow-2xl w-full h-auto" loading="eager" fetchpriority="high" width="600"
-                        height="400">
+                        class="rounded-2xl shadow-2xl w-full h-auto lazy-load" loading="eager" fetchpriority="high"
+                        width="600" height="400">
                 </div>
             </div>
         </div>
@@ -211,9 +211,10 @@
             <div class="mb-12">
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
                     <div class="md:flex">
-                        <div class="md:w-1/3">
+                        <div class="md:w-1/3 image-container">
                             <img src="what_we_do/electrical engineering.png" alt="Electrical Engineering"
-                                class="w-full h-64 md:h-full object-cover" loading="lazy" width="400" height="300">
+                                class="w-full h-64 md:h-full object-cover lazy-load" loading="lazy" width="400"
+                                height="300">
                         </div>
                         <div class="md:w-2/3 p-8">
                             <div class="flex items-center mb-4">
@@ -272,9 +273,10 @@
             <div class="mb-12">
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
                     <div class="md:flex flex-row-reverse">
-                        <div class="md:w-1/3">
+                        <div class="md:w-1/3 image-container">
                             <img src="what_we_do/mechanical_engineering.png" alt="Mechanical Engineering"
-                                class="w-full h-64 md:h-full object-cover" loading="lazy" width="400" height="300">
+                                class="w-full h-64 md:h-full object-cover lazy-load" loading="lazy" width="400"
+                                height="300">
                         </div>
                         <div class="md:w-2/3 p-8">
                             <div class="flex items-center mb-4">
@@ -329,9 +331,10 @@
             <div>
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
                     <div class="md:flex">
-                        <div class="md:w-1/3">
+                        <div class="md:w-1/3 image-container">
                             <img src="what_we_do/civil_n_structural.png" alt="Civil Engineering"
-                                class="w-full h-64 md:h-full object-cover" loading="lazy" width="400" height="300">
+                                class="w-full h-64 md:h-full object-cover lazy-load" loading="lazy" width="400"
+                                height="300">
                         </div>
                         <div class="md:w-2/3 p-8">
                             <div class="flex items-center mb-4">
@@ -459,8 +462,10 @@
             <div class="grid md:grid-cols-3 gap-8 mb-12">
                 <!-- Project Preview 1 -->
                 <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
-                    <img src="what_we_do/solar_mounting/solar1.png" alt="Solar Installation"
-                        class="w-full h-64 object-cover" loading="lazy" width="400" height="256">
+                    <div class="image-container w-full h-64">
+                        <img src="what_we_do/solar_mounting/solar1.png" alt="Solar Installation"
+                            class="w-full h-64 object-cover lazy-load" loading="lazy" width="400" height="256">
+                    </div>
                     <div class="p-6">
                         <div class="flex items-center mb-2">
                             <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-xs font-semibold">Renewable
@@ -476,8 +481,11 @@
 
                 <!-- Project Preview 2 -->
                 <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
-                    <img src="what_we_do/substation/sub7.jpeg" alt="Substation Construction"
-                        class="w-full h-64 object-cover object-[center_10%]" loading="lazy" width="400" height="256">
+                    <div class="image-container w-full h-64">
+                        <img src="what_we_do/substation/sub7.jpeg" alt="Substation Construction"
+                            class="w-full h-64 object-cover object-[center_10%] lazy-load" loading="lazy" width="400"
+                            height="256">
+                    </div>
                     <div class="p-6">
                         <div class="flex items-center mb-2">
                             <span
@@ -493,8 +501,10 @@
 
                 <!-- Project Preview 3 -->
                 <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
-                    <img src="what_we_do/data%20center/Ecobank%20DC_1.jpg" alt="Data Centre"
-                        class="w-full h-64 object-cover" loading="lazy" width="400" height="256">
+                    <div class="image-container w-full h-64">
+                        <img src="what_we_do/data%20center/Ecobank%20DC_1.jpg" alt="Data Centre"
+                            class="w-full h-64 object-cover lazy-load" loading="lazy" width="400" height="256">
+                    </div>
                     <div class="p-6">
                         <div class="flex items-center mb-2">
                             <span
@@ -532,9 +542,11 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
                 <!-- Team Member Preview 1 -->
                 <div class="bg-gray-50 rounded-xl p-6 text-center card-hover">
-                    <img src="images/staff/Trymore.jpg" alt="Eng. Trymore Sharata"
-                        class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-white shadow-lg team-member-img"
-                        loading="lazy" width="128" height="128">
+                    <div class="image-container w-32 h-32 rounded-full mx-auto mb-4">
+                        <img src="images/staff/Trymore.jpg" alt="Eng. Trymore Sharata"
+                            class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg team-member-img lazy-load"
+                            loading="lazy" width="128" height="128">
+                    </div>
                     <h4 class="text-xl font-bold text-gray-900 mb-1">Eng. Trymore Sharata</h4>
                     <p class="text-red-600 font-semibold mb-2">Chairman</p>
                     <p class="text-sm text-gray-600 mb-3">MBA(Z), BSc Elec. Eng. (UZ), PMP</p>
@@ -542,9 +554,11 @@
 
                 <!-- Team Member Preview 2 -->
                 <div class="bg-gray-50 rounded-xl p-6 text-center card-hover">
-                    <img src="images/staff/Salome.jpg" alt="Salome Soneni Chikondo"
-                        class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-white shadow-lg team-member-img"
-                        loading="lazy" width="128" height="128">
+                    <div class="image-container w-32 h-32 rounded-full mx-auto mb-4">
+                        <img src="images/staff/Salome.jpg" alt="Salome Soneni Chikondo"
+                            class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg team-member-img lazy-load"
+                            loading="lazy" width="128" height="128">
+                    </div>
                     <h4 class="text-xl font-bold text-gray-900 mb-1">Salome Soneni Chikondo</h4>
                     <p class="text-red-600 font-semibold mb-2">Advisory Board</p>
                     <p class="text-sm text-gray-600 mb-3">BSc Management & Entrepreneurial Dev Studies, WUA</p>
@@ -552,9 +566,11 @@
 
                 <!-- Team Member Preview 3 -->
                 <div class="bg-gray-50 rounded-xl p-6 text-center card-hover">
-                    <img src="images/staff/mugwagwa.jpg" alt="Dr. H. Mugwagwa"
-                        class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-white shadow-lg team-member-img"
-                        loading="lazy" width="128" height="128">
+                    <div class="image-container w-32 h-32 rounded-full mx-auto mb-4">
+                        <img src="images/staff/mugwagwa.jpg" alt="Dr. H. Mugwagwa"
+                            class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg team-member-img lazy-load"
+                            loading="lazy" width="128" height="128">
+                    </div>
                     <h4 class="text-xl font-bold text-gray-900 mb-1">Dr. H. Mugwagwa</h4>
                     <p class="text-red-600 font-semibold mb-2">Vice Chairman & Legal Advisor</p>
                     <p class="text-sm text-gray-600 mb-3">Juris Doctor, University of Baltimore School of Law</p>
@@ -562,9 +578,11 @@
 
                 <!-- Team Member Preview 4 -->
                 <div class="bg-gray-50 rounded-xl p-6 text-center card-hover">
-                    <img src="images/staff/tawanda_machaka.png" alt="Tawanda Machaka"
-                        class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-white shadow-lg team-member-img"
-                        loading="lazy" width="128" height="128">
+                    <div class="image-container w-32 h-32 rounded-full mx-auto mb-4">
+                        <img src="images/staff/tawanda_machaka.png" alt="Tawanda Machaka"
+                            class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg team-member-img lazy-load"
+                            loading="lazy" width="128" height="128">
+                    </div>
                     <h4 class="text-xl font-bold text-gray-900 mb-1">Tawanda Machaka</h4>
                     <p class="text-red-600 font-semibold mb-2">PM Civil & Structural Engineering</p>
                     <p class="text-sm text-gray-600 mb-3">B. Eng Civil Eng</p>

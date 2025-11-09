@@ -194,3 +194,108 @@ if (document.readyState === 'loading') {
     initImageCarousels();
 }
 
+// Progressive Image Loading with Intersection Observer
+function initProgressiveImageLoading() {
+    // Handle images with data-src (lazy loading)
+    const lazyImages = document.querySelectorAll('img[data-src]');
+    
+    // Handle regular images that should fade in when loaded
+    const regularImages = document.querySelectorAll('img:not([data-src]):not(.loaded)');
+    
+    // Image loading handler
+    function loadImage(img) {
+        return new Promise((resolve, reject) => {
+            if (img.complete && img.naturalHeight !== 0) {
+                // Image already loaded
+                resolve(img);
+                return;
+            }
+            
+            img.onload = () => resolve(img);
+            img.onerror = reject;
+            
+            // If image has data-src, load it
+            if (img.dataset.src) {
+                img.src = img.dataset.src;
+                img.removeAttribute('data-src');
+            }
+        });
+    }
+    
+    // Mark image as loaded and fade in
+    function markImageLoaded(img) {
+        img.classList.add('loaded');
+        img.classList.add('image-fade-in');
+        img.classList.remove('lazy-load');
+        
+        // Remove placeholder background from container
+        const container = img.closest('.image-container');
+        if (container) {
+            container.classList.remove('image-container');
+        }
+    }
+    
+    // Intersection Observer for lazy loading
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                
+                loadImage(img)
+                    .then(() => {
+                        markImageLoaded(img);
+                        observer.unobserve(img);
+                    })
+                    .catch(() => {
+                        // Handle error - maybe show placeholder
+                        img.classList.add('loaded');
+                        observer.unobserve(img);
+                    });
+            }
+        });
+    }, {
+        rootMargin: '50px', // Start loading 50px before image enters viewport
+        threshold: 0.01
+    });
+    
+    // Observe lazy images
+    lazyImages.forEach(img => {
+        // Set a tiny placeholder or keep original src as placeholder
+        if (!img.src) {
+            // Create a 1x1 transparent pixel as placeholder
+            img.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1"%3E%3C/svg%3E';
+        }
+        imageObserver.observe(img);
+    });
+    
+    // Handle regular images (above the fold)
+    regularImages.forEach(img => {
+        // For critical images, load immediately
+        if (img.hasAttribute('fetchpriority') || (img.hasAttribute('loading') && img.getAttribute('loading') === 'eager')) {
+            loadImage(img).then(() => markImageLoaded(img));
+        } else {
+            // For other images, use intersection observer
+            imageObserver.observe(img);
+        }
+    });
+    
+    // Preload critical images
+    const criticalImages = document.querySelectorAll('img[fetchpriority="high"], img[loading="eager"]');
+    criticalImages.forEach(img => {
+        if (img.src && !img.complete) {
+            const link = document.createElement('link');
+            link.rel = 'preload';
+            link.as = 'image';
+            link.href = img.src;
+            document.head.appendChild(link);
+        }
+    });
+}
+
+// Initialize progressive image loading
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initProgressiveImageLoading);
+} else {
+    initProgressiveImageLoading();
+}
+
