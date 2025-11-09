@@ -68,9 +68,9 @@
         }
 
         .logo-img {
-            height: 50px;
+            height: 70px;
             width: auto;
-            max-width: 200px;
+            max-width: 350px;
             object-fit: contain;
             display: block;
             border: none;
@@ -78,24 +78,31 @@
         }
 
         .logo-img-footer {
-            height: 60px;
+            height: 80px;
             width: auto;
-            max-width: 250px;
+            max-width: 400px;
             object-fit: contain;
             display: block;
             border: none;
             outline: none;
         }
 
+        @media (max-width: 768px) {
+            .logo-img {
+                height: 60px;
+                max-width: 280px;
+            }
+        }
+
         @media (max-width: 640px) {
             .logo-img {
-                height: 40px;
-                max-width: 150px;
+                height: 50px;
+                max-width: 220px;
             }
 
             .logo-img-footer {
-                height: 50px;
-                max-width: 200px;
+                height: 60px;
+                max-width: 300px;
             }
         }
     </style>
@@ -106,9 +113,9 @@
     <!-- Navigation -->
     <nav class="fixed w-full top-0 z-50 bg-white shadow-md transition-all duration-300">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
+            <div class="flex justify-between items-center h-24 md:h-20 py-2">
                 <!-- Logo -->
-                <div class="flex items-center">
+                <div class="flex items-center flex-shrink-0">
                     <a href="#home" class="flex items-center">
                         <img src="images/logo/logo.png" alt="Fortune Three Engineers Logo" class="logo-img">
                     </a>
@@ -148,7 +155,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-pattern pt-32 pb-20 md:pt-40 md:pb-32">
+    <section id="home" class="hero-pattern pt-36 pb-20 md:pt-40 md:pb-32">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
@@ -276,8 +283,8 @@
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
                     <div class="md:flex">
                         <div class="md:w-1/3">
-                            <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=600&h=400&fit=crop"
-                                alt="Electrical Engineering" class="w-full h-64 md:h-full object-cover">
+                            <img src="what_we_do/electrical engineering.png" alt="Electrical Engineering"
+                                class="w-full h-64 md:h-full object-cover">
                         </div>
                         <div class="md:w-2/3 p-8">
                             <div class="flex items-center mb-4">
@@ -337,8 +344,8 @@
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
                     <div class="md:flex flex-row-reverse">
                         <div class="md:w-1/3">
-                            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&h=400&fit=crop"
-                                alt="Mechanical Engineering" class="w-full h-64 md:h-full object-cover">
+                            <img src="what_we_do/mechanical_engineering.png" alt="Mechanical Engineering"
+                                class="w-full h-64 md:h-full object-cover">
                         </div>
                         <div class="md:w-2/3 p-8">
                             <div class="flex items-center mb-4">
@@ -394,8 +401,8 @@
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
                     <div class="md:flex">
                         <div class="md:w-1/3">
-                            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=400&fit=crop"
-                                alt="Civil Engineering" class="w-full h-64 md:h-full object-cover">
+                            <img src="what_we_do/civil_n_structural.png" alt="Civil Engineering"
+                                class="w-full h-64 md:h-full object-cover">
                         </div>
                         <div class="md:w-2/3 p-8">
                             <div class="flex items-center mb-4">
@@ -567,8 +574,8 @@
 
                 <!-- Project 3 -->
                 <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
-                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop"
-                        alt="Data Centre" class="w-full h-48 object-cover">
+                    <img src="what_we_do/data_center_installation.jpg" alt="Data Centre"
+                        class="w-full h-48 object-cover">
                     <div class="p-6">
                         <div class="flex items-center mb-2">
                             <span
