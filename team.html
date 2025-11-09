@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team - Fortune Three Engineers</title>
+    <meta name="description"
+        content="Meet the experienced professionals at Fortune Three Engineers - a multidisciplinary team of certified engineers, project managers, and technicians.">
+    
+    <!-- Preconnect to external domains for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="images/logo/logo.png" as="image">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts - Nunito with display=swap for better performance -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="smooth-scroll bg-gray-50">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-50 bg-white shadow-md transition-all duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24 md:h-20 py-2">
+                <!-- Logo -->
+                <div class="flex items-center flex-shrink-0">
+                    <a href="index.html" class="flex items-center">
+                        <img src="images/logo/logo.png" alt="Fortune Three Engineers Logo" class="logo-img" loading="eager" width="200" height="70">
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#home" class="text-gray-700 hover:text-red-600 font-medium transition">Home</a>
+                    <a href="index.html#about" class="text-gray-700 hover:text-red-600 font-medium transition">About</a>
+                    <a href="index.html#services" class="text-gray-700 hover:text-red-600 font-medium transition">Services</a>
+                    <a href="projects.html" class="text-gray-700 hover:text-red-600 font-medium transition">Projects</a>
+                    <a href="team.html" class="text-gray-700 hover:text-red-600 font-medium transition border-b-2 border-red-600">Team</a>
+                    <a href="index.html#contact"
+                        class="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition font-medium">Contact
+                        Us</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-4 space-y-3">
+                <a href="index.html#home" class="block text-gray-700 hover:text-red-600 font-medium py-2">Home</a>
+                <a href="index.html#about" class="block text-gray-700 hover:text-red-600 font-medium py-2">About</a>
+                <a href="index.html#services" class="block text-gray-700 hover:text-red-600 font-medium py-2">Services</a>
+                <a href="projects.html" class="block text-gray-700 hover:text-red-600 font-medium py-2">Projects</a>
+                <a href="team.html" class="block text-gray-700 hover:text-red-600 font-medium py-2">Team</a>
+                <a href="index.html#contact"
+                    class="block bg-red-600 text-white px-6 py-2 rounded-full text-center font-medium">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Team Header -->
+    <section class="hero-pattern pt-36 pb-20 md:pt-40 md:pb-32">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                    Our <span class="text-gradient">Team</span>
+                </h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Meet the experienced professionals driving our success
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section-padding bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Management Team -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">Management</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Team Member 1 -->
+                    <div class="bg-gray-50 rounded-xl p-6 text-center card-hover">
+                        <img src="images/staff/Trymore.jpg" alt="Eng. Trymore Sharata"
+                            class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-white shadow-lg team-member-img" loading="lazy" width="128" height="128">
+                        <h4 class="text-xl font-bold text-gray-900 mb-1">Eng. Trymore Sharata</h4>
+                        <p class="text-red-600 font-semibold mb-2">Chairman</p>
+                        <p class="text-sm text-gray-600 mb-3">MBA(Z), BSc Elec. Eng. (UZ), PMP</p>
+                        <p class="text-sm text-gray-600">
+                            Infrastructure Executive with extensive experience. Global experience in South Africa. Holds
+                            Renewable Energy PV Green Card.
+                        </p>
+                    </div>
+
+                    <!-- Team Member 2 -->
+                    <div class="bg-gray-50 rounded-xl p-6 text-center card-hover">
+                        <img src="images/staff/Salome.jpg" alt="Salome Soneni Chikondo"
+                            class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-white shadow-lg team-member-img" loading="lazy" width="128" height="128">
+                        <h4 class="text-xl font-bold text-gray-900 mb-1">Salome Soneni Chikondo</h4>
+                        <p class="text-red-600 font-semibold mb-2">Advisory Board</p>
+                        <p class="text-sm text-gray-600 mb-3">BSc Management & Entrepreneurial Dev Studies, WUA</p>
+                        <p class="text-sm text-gray-600">
+                            10+ years experience in Business Management. Serial Business Management award winner. Well
+                            known start-up leader and strategic manager.
+                        </p>
+                    </div>
+
+                    <!-- Team Member 3 -->
+                    <div class="bg-gray-50 rounded-xl p-6 text-center card-hover">
+                        <img src="images/staff/mugwagwa.jpg" alt="Dr. H. Mugwagwa"
+                            class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-white shadow-lg team-member-img" loading="lazy" width="128" height="128">
+                        <h4 class="text-xl font-bold text-gray-900 mb-1">Dr. H. Mugwagwa</h4>
+                        <p class="text-red-600 font-semibold mb-2">Vice Chairman & Legal Advisor</p>
+                        <p class="text-sm text-gray-600 mb-3">Juris Doctor, University of Baltimore School of Law</p>
+                        <p class="text-sm text-gray-600">
+                            10+ years experience in Global legal matters, Corporate Strategy and Corporate Finance.
+                            Senior Partner at FLP Consultancy.
+                        </p>
+                    </div>
+
+                    <!-- Team Member 4 -->
+                    <div class="bg-gray-50 rounded-xl p-6 text-center card-hover">
+                        <img src="images/staff/tawanda_machaka.png" alt="Tawanda Machaka"
+                            class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-white shadow-lg team-member-img" loading="lazy" width="128" height="128">
+                        <h4 class="text-xl font-bold text-gray-900 mb-1">Tawanda Machaka</h4>
+                        <p class="text-red-600 font-semibold mb-2">PM Civil & Structural Engineering</p>
+                        <p class="text-sm text-gray-600 mb-3">B. Eng Civil Eng</p>
+                        <p class="text-sm text-gray-600">
+                            Infrastructure Executive with global experience in Russia, South Africa, Zambia, and
+                            Zimbabwe. Deep Infrastructural Design skills.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Engineering Team -->
+            <div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">Engineering Team</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Team Member 5 -->
+                    <div class="bg-gray-50 rounded-xl p-6 text-center card-hover">
+                        <img src="images/staff/Beloved.jpg" alt="Beloved Baradze"
+                            class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-white shadow-lg team-member-img" loading="lazy" width="128" height="128">
+                        <h4 class="text-xl font-bold text-gray-900 mb-1">Beloved Baradze</h4>
+                        <p class="text-blue-600 font-semibold mb-2">Design Engineer</p>
+                        <p class="text-sm text-gray-600 mb-3">BSc (Hons) Electrical Eng. (UZ)</p>
+                        <p class="text-sm text-gray-600">
+                            Electrical Engineer with experience in large, medium, and small-scale Engineering Plants.
+                            Bulk of experience in Solar, Automation and Control. Directly involved in over $25 Million
+                            worth of projects.
+                        </p>
+                    </div>
+
+                    <!-- Team Member 6 -->
+                    <div class="bg-gray-50 rounded-xl p-6 text-center card-hover">
+                        <img src="images/staff/Talent.jpg" alt="Talent Fortune Mutyasira"
+                            class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-white shadow-lg team-member-img" loading="lazy" width="128" height="128">
+                        <h4 class="text-xl font-bold text-gray-900 mb-1">Talent Fortune Mutyasira</h4>
+                        <p class="text-blue-600 font-semibold mb-2">Technical Projects Manager</p>
+                        <p class="text-sm text-gray-600 mb-3">BSc (Hons) Medical Analytics & Informatics (UZ)</p>
+                        <p class="text-sm text-gray-600">
+                            2+ years experience in Projects Management Bio-Medical, Power engineering. University of
+                            Zimbabwe Former Top Student. Trained in China. Presided through successful completion of
+                            several major projects.
+                        </p>
+                    </div>
+
+                    <!-- Team Member 7 -->
+                    <div class="bg-gray-50 rounded-xl p-6 text-center card-hover">
+                        <img src="images/staff/Tawanda.jpg" alt="Tawanda Mabvadya"
+                            class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-white shadow-lg team-member-img" loading="lazy" width="128" height="128">
+                        <h4 class="text-xl font-bold text-gray-900 mb-1">Tawanda Mabvadya</h4>
+                        <p class="text-blue-600 font-semibold mb-2">Technical Engineer</p>
+                        <p class="text-sm text-gray-600 mb-3">BSc (Hons) Electrical Eng. (UZ)</p>
+                        <p class="text-sm text-gray-600">
+                            1 year intern experience at Zesa Enterprises focusing on High Voltage Power systems. 1+ year
+                            Graduate Engineer at Glytime Foods. Experience in Solar PV designs and installations.
+                        </p>
+                    </div>
+
+                    <!-- Team Member 8 -->
+                    <div class="bg-gray-50 rounded-xl p-6 text-center card-hover">
+                        <img src="images/staff/fuwe.jpg" alt="Justine Fuwe"
+                            class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-white shadow-lg team-member-img" loading="lazy" width="128" height="128">
+                        <h4 class="text-xl font-bold text-gray-900 mb-1">Justine Fuwe</h4>
+                        <p class="text-blue-600 font-semibold mb-2">Design Engineer</p>
+                        <p class="text-sm text-gray-600 mb-3">BSc (Hons) Electrical Eng. (UZ)</p>
+                        <p class="text-sm text-gray-600">
+                            Proficient Electrical Engineer who has participated in various Power Projects and Renewable
+                            Energy Projects including Solar PV plants design, engineering and construction works.
+                            Successfully involved in over $30 Million worth of Power Projects.
+                        </p>
+                    </div>
+
+                    <!-- Team Member 9 -->
+                    <div class="bg-gray-50 rounded-xl p-6 text-center card-hover">
+                        <img src="images/staff/mukwaira.png" alt="Priviledge Mukwaira"
+                            class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-white shadow-lg team-member-img" loading="lazy" width="128" height="128">
+                        <h4 class="text-xl font-bold text-gray-900 mb-1">Priviledge Mukwaira</h4>
+                        <p class="text-blue-600 font-semibold mb-2">Specialist Technician (Huawei Equipment)</p>
+                        <p class="text-sm text-gray-600 mb-3">Professional Technician</p>
+                        <p class="text-sm text-gray-600">
+                            Specialist Power & Telecommunications Technician. Global experience having worked in China,
+                            South Africa & Zimbabwe. Certified Project Management Professional. Track record of
+                            successfully implementing Huawei, Sunsvnk, ABB equipment.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Mix -->
+            <div class="mt-16 bg-gradient-to-r from-red-600 to-blue-600 rounded-2xl p-8 md:p-12 text-white">
+                <h3 class="text-3xl font-bold mb-8 text-center">Our Skills Mix</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="bg-white bg-opacity-20 rounded-lg p-4">
+                        <h4 class="font-semibold mb-2">Engineering</h4>
+                        <ul class="text-sm space-y-1">
+                            <li>• Electrical Engineers</li>
+                            <li>• Mechanical Engineers</li>
+                            <li>• Civil & Structural Engineers</li>
+                            <li>• Renewable Energy Engineers</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white bg-opacity-20 rounded-lg p-4">
+                        <h4 class="font-semibold mb-2">Specialists</h4>
+                        <ul class="text-sm space-y-1">
+                            <li>• Telecommunications/IT Engineers</li>
+                            <li>• Certified Project Managers</li>
+                            <li>• Project Supervisors</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white bg-opacity-20 rounded-lg p-4">
+                        <h4 class="font-semibold mb-2">Technicians</h4>
+                        <ul class="text-sm space-y-1">
+                            <li>• Electrical Technicians</li>
+                            <li>• Mechanical Technicians</li>
+                            <li>• Civil & Structural Technicians</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white bg-opacity-20 rounded-lg p-4">
+                        <h4 class="font-semibold mb-2">Support</h4>
+                        <ul class="text-sm space-y-1">
+                            <li>• Riggers</li>
+                            <li>• General Labour</li>
+                            <li>• Support Staff</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-padding gradient-bg text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Start Your Project?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+                Let's discuss how Fortune Three Engineers can help bring your infrastructure vision to life.
+            </p>
+            <a href="index.html#contact"
+                class="bg-white text-red-600 px-10 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition shadow-xl inline-block">
+                Contact Us Now
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="mb-4">
+                        <img src="images/logo/logo.png" alt="Fortune Three Engineers Logo" class="logo-img-footer" loading="lazy" width="200" height="80">
+                    </div>
+                    <p class="text-gray-400 text-sm mb-4">
+                        Engineering Pace Setters. Building Zimbabwe's infrastructure future with excellence, innovation,
+                        and integrity.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="index.html#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="projects.html" class="text-gray-400 hover:text-white transition">Projects</a></li>
+                        <li><a href="team.html" class="text-gray-400 hover:text-white transition">Our Team</a></li>
+                        <li><a href="index.html#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Our Services</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li>Electrical Engineering</li>
+                        <li>Mechanical Engineering</li>
+                        <li>Civil & Structural Engineering</li>
+                        <li>Renewable Energy</li>
+                        <li>Telecommunications</li>
+                        <li>Data Centres</li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact Us</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mr-3 mt-1 text-red-600"></i>
+                            <span>No: 2238 Arlington Estate<br>Hatfield, Harare<br>Zimbabwe</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-red-600"></i>
+                            <span>+263 242 301 279</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-mobile-alt mr-3 text-red-600"></i>
+                            <span>+263 773 436 391</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-red-600"></i>
+                            <span>trymore@fortunethreeengineers.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 mt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                        &copy; 2025 Fortune Three Engineers (Pvt) Ltd. All rights reserved.
+                    </p>
+                </div>
+                <div class="mt-4 text-center text-sm text-gray-500">
+                    <p>Company Registration: 9920/2012 | VAT: 220356870 | TIN: 2000923034</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top"
+        class="fixed bottom-8 right-8 w-12 h-12 bg-red-600 text-white rounded-full shadow-lg hover:bg-red-700 transition opacity-0 invisible z-50 flex items-center justify-center">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Custom JavaScript -->
+    <script src="js/script.js" defer></script>
+</body>
+
+</html>
+

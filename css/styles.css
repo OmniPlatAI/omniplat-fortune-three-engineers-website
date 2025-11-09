@@ -26,7 +26,8 @@
 }
 
 .card-hover {
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform;
 }
 
 .card-hover:hover {
@@ -101,6 +102,7 @@
     width: 100%;
     opacity: 0;
     transition: opacity 1s ease-in-out;
+    will-change: opacity;
 }
 
 .carousel-image[style*="height"] {
@@ -156,5 +158,22 @@
 
 .animate-fade-in {
     animation: fadeIn 0.6s ease-out forwards;
+    will-change: opacity, transform;
+}
+
+/* Performance optimizations */
+img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+/* Reduce repaints on scroll */
+nav {
+    will-change: box-shadow;
+}
+
+/* Optimize font loading */
+body {
+    font-display: swap;
 }
 
