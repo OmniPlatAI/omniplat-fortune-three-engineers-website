@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortune Three Engineers - Engineering Pace Setters</title>
+    <meta name="description"
+        content="Fortune Three Engineers - Leading infrastructure engineering firm specializing in Electrical, Mechanical, and Civil & Structural Engineering projects in Zimbabwe.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts - Nunito -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        * {
+            font-family: 'Nunito', sans-serif;
+        }
+
+        :root {
+            --primary-red: #DC2626;
+            --primary-blue: #2563EB;
+            --light-blue: #3B82F6;
+            --dark-blue: #1E40AF;
+            --accent-teal: #06B6D4;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-blue) 100%);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-blue) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-padding {
+            padding: 5rem 0;
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+
+        .hero-pattern {
+            background-image:
+                radial-gradient(circle at 20% 50%, rgba(37, 99, 235, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(220, 38, 38, 0.1) 0%, transparent 50%);
+        }
+
+        .logo-img {
+            height: 50px;
+            width: auto;
+            max-width: 200px;
+            object-fit: contain;
+            display: block;
+            border: none;
+            outline: none;
+        }
+
+        .logo-img-footer {
+            height: 60px;
+            width: auto;
+            max-width: 250px;
+            object-fit: contain;
+            display: block;
+            border: none;
+            outline: none;
+        }
+
+        @media (max-width: 640px) {
+            .logo-img {
+                height: 40px;
+                max-width: 150px;
+            }
+
+            .logo-img-footer {
+                height: 50px;
+                max-width: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body class="smooth-scroll bg-gray-50">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-50 bg-white shadow-md transition-all duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="#home" class="flex items-center">
+                        <img src="images/logo/logo.png" alt="Fortune Three Engineers Logo" class="logo-img">
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-red-600 font-medium transition">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-red-600 font-medium transition">About</a>
+                    <a href="#services" class="text-gray-700 hover:text-red-600 font-medium transition">Services</a>
+                    <a href="#projects" class="text-gray-700 hover:text-red-600 font-medium transition">Projects</a>
+                    <a href="#team" class="text-gray-700 hover:text-red-600 font-medium transition">Team</a>
+                    <a href="#contact"
+                        class="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition font-medium">Contact
+                        Us</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-4 space-y-3">
+                <a href="#home" class="block text-gray-700 hover:text-red-600 font-medium py-2">Home</a>
+                <a href="#about" class="block text-gray-700 hover:text-red-600 font-medium py-2">About</a>
+                <a href="#services" class="block text-gray-700 hover:text-red-600 font-medium py-2">Services</a>
+                <a href="#projects" class="block text-gray-700 hover:text-red-600 font-medium py-2">Projects</a>
+                <a href="#team" class="block text-gray-700 hover:text-red-600 font-medium py-2">Team</a>
+                <a href="#contact"
+                    class="block bg-red-600 text-white px-6 py-2 rounded-full text-center font-medium">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-pattern pt-32 pb-20 md:pt-40 md:pb-32">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="inline-block bg-red-100 text-red-600 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                        Engineering Pace Setters
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                        Building Zimbabwe's
+                        <span class="text-gradient">Infrastructure Future</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                        We are a collection of Engineers, Investment Bankers and Project Managers focusing on
+                        Infrastructure Projects in Zimbabwe. Delivering excellence in Electrical, Mechanical, and Civil
+                        & Structural Engineering.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact"
+                            class="bg-red-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-red-700 transition text-center shadow-lg">
+                            Get Started
+                        </a>
+                        <a href="#services"
+                            class="bg-white text-red-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-50 transition text-center border-2 border-red-600">
+                            Our Services
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop"
+                        alt="Engineering Excellence" class="rounded-2xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Who We Are</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-red-600 to-blue-600 mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    A leading engineering firm committed to delivering world-class infrastructure solutions across
+                    Zimbabwe
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="text-center p-6 rounded-xl bg-gray-50 card-hover">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-bullseye text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Our Mission</h3>
+                    <p class="text-gray-600">
+                        To be the leading infrastructure engineering firm in Zimbabwe, delivering innovative and
+                        sustainable solutions that drive economic growth.
+                    </p>
+                </div>
+
+                <div class="text-center p-6 rounded-xl bg-gray-50 card-hover">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-eye text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Our Vision</h3>
+                    <p class="text-gray-600">
+                        To set the pace in engineering excellence, creating lasting infrastructure that transforms
+                        communities and empowers Zimbabwe.
+                    </p>
+                </div>
+
+                <div class="text-center p-6 rounded-xl bg-gray-50 card-hover">
+                    <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-gem text-teal-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Our Values</h3>
+                    <p class="text-gray-600">
+                        Integrity, Excellence, Innovation, and Social Responsibility guide everything we do. We are
+                        committed to honesty and quality in every project.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Company Details -->
+            <div class="bg-gradient-to-r from-red-600 to-blue-600 rounded-2xl p-8 md:p-12 text-white">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6">Company Information</h3>
+                        <div class="space-y-3">
+                            <p><strong>Company Name:</strong> Fortune Three Engineers (Pvt) Ltd</p>
+                            <p><strong>Registration:</strong> 9920/2012</p>
+                            <p><strong>TIN Number:</strong> 2000923034</p>
+                            <p><strong>VAT Number:</strong> 220356870</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6">Our Commitment</h3>
+                        <p class="mb-4">
+                            Our success has been based on hard work and an unwavering commitment to honesty and
+                            integrity in everything we do. Guided by our values, our Code sets out our responsibilities
+                            to co-workers, business partners and the company.
+                        </p>
+                        <p>
+                            We are cognizant of our need to protect the environment in which we work and ensure the
+                            safety of all stakeholders through comprehensive management systems.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">What We Do</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-red-600 to-blue-600 mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Comprehensive engineering solutions across Electrical, Mechanical, and Civil & Structural
+                    disciplines
+                </p>
+            </div>
+
+            <!-- Electrical Engineering -->
+            <div class="mb-12">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="md:flex">
+                        <div class="md:w-1/3">
+                            <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=600&h=400&fit=crop"
+                                alt="Electrical Engineering" class="w-full h-64 md:h-full object-cover">
+                        </div>
+                        <div class="md:w-2/3 p-8">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fas fa-bolt text-red-600 text-xl"></i>
+                                </div>
+                                <h3 class="text-3xl font-bold text-gray-900">Electrical Engineering</h3>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-2">Renewable Energy</h4>
+                                    <ul class="text-gray-600 space-y-1 text-sm">
+                                        <li><i class="fas fa-check text-red-600 mr-2"></i>Solar PV Systems</li>
+                                        <li><i class="fas fa-check text-red-600 mr-2"></i>Solar CSP</li>
+                                        <li><i class="fas fa-check text-red-600 mr-2"></i>Wind Power</li>
+                                        <li><i class="fas fa-check text-red-600 mr-2"></i>Hydro Power</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-2">Power Systems</h4>
+                                    <ul class="text-gray-600 space-y-1 text-sm">
+                                        <li><i class="fas fa-check text-red-600 mr-2"></i>Power Generation &
+                                            Distribution</li>
+                                        <li><i class="fas fa-check text-red-600 mr-2"></i>HV up to 400kV Substations
+                                        </li>
+                                        <li><i class="fas fa-check text-red-600 mr-2"></i>Transmission Lines
+                                            (11kV-132kV)</li>
+                                        <li><i class="fas fa-check text-red-600 mr-2"></i>UPS & Data Centres</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-2">Telecommunications</h4>
+                                    <ul class="text-gray-600 space-y-1 text-sm">
+                                        <li><i class="fas fa-check text-red-600 mr-2"></i>Substation Installations</li>
+                                        <li><i class="fas fa-check text-red-600 mr-2"></i>Primary Equipment</li>
+                                        <li><i class="fas fa-check text-red-600 mr-2"></i>Communication Equipment</li>
+                                        <li><i class="fas fa-check text-red-600 mr-2"></i>SCADA Systems</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-2">EPC Services</h4>
+                                    <ul class="text-gray-600 space-y-1 text-sm">
+                                        <li><i class="fas fa-check text-red-600 mr-2"></i>Engineering Procurement &
+                                            Construction</li>
+                                        <li><i class="fas fa-check text-red-600 mr-2"></i>Consulting & Design</li>
+                                        <li><i class="fas fa-check text-red-600 mr-2"></i>Turnkey Solutions</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mechanical Engineering -->
+            <div class="mb-12">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="md:flex flex-row-reverse">
+                        <div class="md:w-1/3">
+                            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&h=400&fit=crop"
+                                alt="Mechanical Engineering" class="w-full h-64 md:h-full object-cover">
+                        </div>
+                        <div class="md:w-2/3 p-8">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fas fa-cogs text-blue-600 text-xl"></i>
+                                </div>
+                                <h3 class="text-3xl font-bold text-gray-900">Mechanical Engineering</h3>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-2">HVAC & Systems</h4>
+                                    <ul class="text-gray-600 space-y-1 text-sm">
+                                        <li><i class="fas fa-check text-blue-600 mr-2"></i>HVAC Systems Design &
+                                            Installation</li>
+                                        <li><i class="fas fa-check text-blue-600 mr-2"></i>Fire Protection Systems</li>
+                                        <li><i class="fas fa-check text-blue-600 mr-2"></i>Pumps & Motors</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-2">Manufacturing & Plant</h4>
+                                    <ul class="text-gray-600 space-y-1 text-sm">
+                                        <li><i class="fas fa-check text-blue-600 mr-2"></i>New Plant Installations</li>
+                                        <li><i class="fas fa-check text-blue-600 mr-2"></i>Equipment Machining & Fitting
+                                        </li>
+                                        <li><i class="fas fa-check text-blue-600 mr-2"></i>Boiler Making</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-2">Operations & Maintenance</h4>
+                                    <ul class="text-gray-600 space-y-1 text-sm">
+                                        <li><i class="fas fa-check text-blue-600 mr-2"></i>Plant Operations &
+                                            Maintenance</li>
+                                        <li><i class="fas fa-check text-blue-600 mr-2"></i>Process Piping</li>
+                                        <li><i class="fas fa-check text-blue-600 mr-2"></i>Mechanical Design</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-2">EPC Services</h4>
+                                    <ul class="text-gray-600 space-y-1 text-sm">
+                                        <li><i class="fas fa-check text-blue-600 mr-2"></i>Turnkey Engineering
+                                            Procurement & Construction</li>
+                                        <li><i class="fas fa-check text-blue-600 mr-2"></i>Consulting & Design</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Civil & Structural Engineering -->
+            <div>
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="md:flex">
+                        <div class="md:w-1/3">
+                            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=400&fit=crop"
+                                alt="Civil Engineering" class="w-full h-64 md:h-full object-cover">
+                        </div>
+                        <div class="md:w-2/3 p-8">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fas fa-building text-teal-600 text-xl"></i>
+                                </div>
+                                <h3 class="text-3xl font-bold text-gray-900">Civil & Structural Engineering</h3>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-2">Infrastructure</h4>
+                                    <ul class="text-gray-600 space-y-1 text-sm">
+                                        <li><i class="fas fa-check text-teal-600 mr-2"></i>Road Construction</li>
+                                        <li><i class="fas fa-check text-teal-600 mr-2"></i>Bridge Construction</li>
+                                        <li><i class="fas fa-check text-teal-600 mr-2"></i>Dam Construction</li>
+                                        <li><i class="fas fa-check text-teal-600 mr-2"></i>Building Construction</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-2">Utilities</h4>
+                                    <ul class="text-gray-600 space-y-1 text-sm">
+                                        <li><i class="fas fa-check text-teal-600 mr-2"></i>Water Reticulation</li>
+                                        <li><i class="fas fa-check text-teal-600 mr-2"></i>Sewerage Systems</li>
+                                        <li><i class="fas fa-check text-teal-600 mr-2"></i>Drainage Systems</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-2">Design & Consulting</h4>
+                                    <ul class="text-gray-600 space-y-1 text-sm">
+                                        <li><i class="fas fa-check text-teal-600 mr-2"></i>Civil & Structural Design
+                                        </li>
+                                        <li><i class="fas fa-check text-teal-600 mr-2"></i>Architectural Designs</li>
+                                        <li><i class="fas fa-check text-teal-600 mr-2"></i>Consulting Services</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-2">EPC Services</h4>
+                                    <ul class="text-gray-600 space-y-1 text-sm">
+                                        <li><i class="fas fa-check text-teal-600 mr-2"></i>Turnkey Engineering
+                                            Procurement & Construction</li>
+                                        <li><i class="fas fa-check text-teal-600 mr-2"></i>Project Management</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="section-padding bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Why Choose Us</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-red-600 to-blue-600 mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Our track record speaks for itself - delivering excellence across Zimbabwe's infrastructure
+                    landscape
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center p-6 rounded-xl bg-gray-50 card-hover">
+                    <div
+                        class="w-20 h-20 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-award text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Proven Track Record</h3>
+                    <p class="text-gray-600">
+                        Successfully completed projects worth millions, from solar installations to major infrastructure
+                        developments.
+                    </p>
+                </div>
+
+                <div class="text-center p-6 rounded-xl bg-gray-50 card-hover">
+                    <div
+                        class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-users text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Expert Team</h3>
+                    <p class="text-gray-600">
+                        Multidisciplinary team of certified engineers, project managers, and technicians with global
+                        experience.
+                    </p>
+                </div>
+
+                <div class="text-center p-6 rounded-xl bg-gray-50 card-hover">
+                    <div
+                        class="w-20 h-20 bg-gradient-to-br from-teal-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-handshake text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Turnkey Solutions</h3>
+                    <p class="text-gray-600">
+                        End-to-end services from design and procurement to construction and commissioning.
+                    </p>
+                </div>
+
+                <div class="text-center p-6 rounded-xl bg-gray-50 card-hover">
+                    <div
+                        class="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-shield-alt text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Safety & Quality</h3>
+                    <p class="text-gray-600">
+                        Comprehensive safety management systems and commitment to environmental protection.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects/Track Record Section -->
+    <section id="projects" class="section-padding bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Track Record</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-red-600 to-blue-600 mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Showcasing our successful projects across various sectors
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                    <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&h=400&fit=crop"
+                        alt="Solar Installation" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-xs font-semibold">Renewable
+                                Energy</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Solar Installations</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Turnkey solar installations ranging from 15kWp to 90kWh systems for commercial and
+                            industrial clients.
+                        </p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li><i class="fas fa-check text-red-600 mr-2"></i>24kWp Business Systems</li>
+                            <li><i class="fas fa-check text-red-600 mr-2"></i>30kWp Balance of System</li>
+                            <li><i class="fas fa-check text-red-600 mr-2"></i>Solar Structural & Civil Engineering</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                    <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600&h=400&fit=crop"
+                        alt="Substation" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <span
+                                class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs font-semibold">Electrical</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Substation Construction</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Design and construction of high-voltage substations up to 400kV, including access roads and
+                            drainage systems.
+                        </p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li><i class="fas fa-check text-blue-600 mr-2"></i>Gwanda Substation</li>
+                            <li><i class="fas fa-check text-blue-600 mr-2"></i>Cascada Substation</li>
+                            <li><i class="fas fa-check text-blue-600 mr-2"></i>33kV Line Construction</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop"
+                        alt="Data Centre" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <span
+                                class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-xs font-semibold">Telecoms</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Data Centre Installation</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Complete turnkey data centre solutions including procurement, installation, and
+                            commissioning.
+                        </p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li><i class="fas fa-check text-purple-600 mr-2"></i>Ecobank Data Centre</li>
+                            <li><i class="fas fa-check text-purple-600 mr-2"></i>Bank Data Centres</li>
+                            <li><i class="fas fa-check text-purple-600 mr-2"></i>UPS Installations</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                    <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&h=400&fit=crop"
+                        alt="Road Construction" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <span
+                                class="bg-teal-100 text-teal-600 px-3 py-1 rounded-full text-xs font-semibold">Civil</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Road & Infrastructure</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Road construction, dam refurbishment, and site development projects across Zimbabwe.
+                        </p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li><i class="fas fa-check text-teal-600 mr-2"></i>New Road Construction</li>
+                            <li><i class="fas fa-check text-teal-600 mr-2"></i>Dam Refurbishment</li>
+                            <li><i class="fas fa-check text-teal-600 mr-2"></i>Site Development</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                    <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=600&h=400&fit=crop"
+                        alt="Power Lines" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-xs font-semibold">Power
+                                Lines</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Power Line Monopole Installation</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Installation of power line monopoles including foundation works and concrete construction.
+                        </p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li><i class="fas fa-check text-red-600 mr-2"></i>Manhize Power Line - 30m</li>
+                            <li><i class="fas fa-check text-red-600 mr-2"></i>Monopole Foundations</li>
+                            <li><i class="fas fa-check text-red-600 mr-2"></i>Concrete Works</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=400&fit=crop"
+                        alt="Building Construction" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <span
+                                class="bg-teal-100 text-teal-600 px-3 py-1 rounded-full text-xs font-semibold">Construction</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Building & Structure Construction</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Complete building construction services including excavation, foundation, and structural
+                            works.
+                        </p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li><i class="fas fa-check text-teal-600 mr-2"></i>Site Construction</li>
+                            <li><i class="fas fa-check text-teal-600 mr-2"></i>Building Construction</li>
+                            <li><i class="fas fa-check text-teal-600 mr-2"></i>Foundation Works</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="section-padding bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Team</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-red-600 to-blue-600 mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Meet the experienced professionals driving our success
+                </p>
+            </div>
+
+            <!-- Management Team -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">Management</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Team Member 1 -->
+                    <div class="bg-gray-50 rounded-xl p-6 text-center card-hover">
+                        <img src="images/staff/Trymore.jpg" alt="Eng. Trymore Sharata"
+                            class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-white shadow-lg">
+                        <h4 class="text-xl font-bold text-gray-900 mb-1">Eng. Trymore Sharata</h4>
+                        <p class="text-red-600 font-semibold mb-2">Chairman</p>
+                        <p class="text-sm text-gray-600 mb-3">MBA(Z), BSc Elec. Eng. (UZ), PMP</p>
+                        <p class="text-sm text-gray-600">
+                            Infrastructure Executive with extensive experience. Global experience in South Africa. Holds
+                            Renewable Energy PV Green Card.
+                        </p>
+                    </div>
+
+                    <!-- Team Member 2 -->
+                    <div class="bg-gray-50 rounded-xl p-6 text-center card-hover">
+                        <img src="images/staff/Salome.jpg" alt="Salome Soneni Chikondo"
+                            class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-white shadow-lg">
+                        <h4 class="text-xl font-bold text-gray-900 mb-1">Salome Soneni Chikondo</h4>
+                        <p class="text-red-600 font-semibold mb-2">Advisory Board</p>
+                        <p class="text-sm text-gray-600 mb-3">BSc Management & Entrepreneurial Dev Studies, WUA</p>
+                        <p class="text-sm text-gray-600">
+                            10+ years experience in Business Management. Serial Business Management award winner. Well
+                            known start-up leader and strategic manager.
+                        </p>
+                    </div>
+
+                    <!-- Team Member 3 -->
+                    <div class="bg-gray-50 rounded-xl p-6 text-center card-hover">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop"
+                            alt="Dr. H. Mugwagwa"
+                            class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-white shadow-lg">
+                        <h4 class="text-xl font-bold text-gray-900 mb-1">Dr. H. Mugwagwa</h4>
+                        <p class="text-red-600 font-semibold mb-2">Vice Chairman & Legal Advisor</p>
+                        <p class="text-sm text-gray-600 mb-3">Juris Doctor, University of Baltimore School of Law</p>
+                        <p class="text-sm text-gray-600">
+                            10+ years experience in Global legal matters, Corporate Strategy and Corporate Finance.
+                            Senior Partner at FLP Consultancy.
+                        </p>
+                    </div>
+
+                    <!-- Team Member 4 -->
+                    <div class="bg-gray-50 rounded-xl p-6 text-center card-hover">
+                        <img src="images/staff/Tawanda.jpg" alt="Tawanda Machaka"
+                            class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-white shadow-lg">
+                        <h4 class="text-xl font-bold text-gray-900 mb-1">Tawanda Machaka</h4>
+                        <p class="text-red-600 font-semibold mb-2">PM Civil & Structural Engineering</p>
+                        <p class="text-sm text-gray-600 mb-3">B. Eng Civil Eng</p>
+                        <p class="text-sm text-gray-600">
+                            Infrastructure Executive with global experience in Russia, South Africa, Zambia, and
+                            Zimbabwe. Deep Infrastructural Design skills.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Engineering Team -->
+            <div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">Engineering Team</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Team Member 5 -->
+                    <div class="bg-gray-50 rounded-xl p-6 text-center card-hover">
+                        <img src="images/staff/Beloved.jpg" alt="Beloved Baradze"
+                            class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-white shadow-lg">
+                        <h4 class="text-xl font-bold text-gray-900 mb-1">Beloved Baradze</h4>
+                        <p class="text-blue-600 font-semibold mb-2">Design Engineer</p>
+                        <p class="text-sm text-gray-600 mb-3">BSc (Hons) Electrical Eng. (UZ)</p>
+                        <p class="text-sm text-gray-600">
+                            Electrical Engineer with experience in large, medium, and small-scale Engineering Plants.
+                            Bulk of experience in Solar, Automation and Control. Directly involved in over $25 Million
+                            worth of projects.
+                        </p>
+                    </div>
+
+                    <!-- Team Member 6 -->
+                    <div class="bg-gray-50 rounded-xl p-6 text-center card-hover">
+                        <img src="images/staff/Talent.jpg" alt="Talent Fortune Mutyasira"
+                            class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-white shadow-lg">
+                        <h4 class="text-xl font-bold text-gray-900 mb-1">Talent Fortune Mutyasira</h4>
+                        <p class="text-blue-600 font-semibold mb-2">Technical Projects Manager</p>
+                        <p class="text-sm text-gray-600 mb-3">BSc (Hons) Medical Analytics & Informatics (UZ)</p>
+                        <p class="text-sm text-gray-600">
+                            2+ years experience in Projects Management Bio-Medical, Power engineering. University of
+                            Zimbabwe Former Top Student. Trained in China. Presided through successful completion of
+                            several major projects.
+                        </p>
+                    </div>
+
+                    <!-- Team Member 7 -->
+                    <div class="bg-gray-50 rounded-xl p-6 text-center card-hover">
+                        <img src="images/staff/Tawanda.jpg" alt="Tawanda Mabvadya"
+                            class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-white shadow-lg">
+                        <h4 class="text-xl font-bold text-gray-900 mb-1">Tawanda Mabvadya</h4>
+                        <p class="text-blue-600 font-semibold mb-2">Technical Engineer</p>
+                        <p class="text-sm text-gray-600 mb-3">BSc (Hons) Electrical Eng. (UZ)</p>
+                        <p class="text-sm text-gray-600">
+                            1 year intern experience at Zesa Enterprises focusing on High Voltage Power systems. 1+ year
+                            Graduate Engineer at Glytime Foods. Experience in Solar PV designs and installations.
+                        </p>
+                    </div>
+
+                    <!-- Team Member 8 -->
+                    <div class="bg-gray-50 rounded-xl p-6 text-center card-hover">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop"
+                            alt="Justine Fuwe"
+                            class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-white shadow-lg">
+                        <h4 class="text-xl font-bold text-gray-900 mb-1">Justine Fuwe</h4>
+                        <p class="text-blue-600 font-semibold mb-2">Design Engineer</p>
+                        <p class="text-sm text-gray-600 mb-3">BSc (Hons) Electrical Eng. (UZ)</p>
+                        <p class="text-sm text-gray-600">
+                            Proficient Electrical Engineer who has participated in various Power Projects and Renewable
+                            Energy Projects including Solar PV plants design, engineering and construction works.
+                            Successfully involved in over $30 Million worth of Power Projects.
+                        </p>
+                    </div>
+
+                    <!-- Team Member 9 -->
+                    <div class="bg-gray-50 rounded-xl p-6 text-center card-hover">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop"
+                            alt="Priviledge Mukwaira"
+                            class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-white shadow-lg">
+                        <h4 class="text-xl font-bold text-gray-900 mb-1">Priviledge Mukwaira</h4>
+                        <p class="text-blue-600 font-semibold mb-2">Specialist Technician (Huawei Equipment)</p>
+                        <p class="text-sm text-gray-600 mb-3">Professional Technician</p>
+                        <p class="text-sm text-gray-600">
+                            Specialist Power & Telecommunications Technician. Global experience having worked in China,
+                            South Africa & Zimbabwe. Certified Project Management Professional. Track record of
+                            successfully implementing Huawei, Sunsvnk, ABB equipment.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Mix -->
+            <div class="mt-16 bg-gradient-to-r from-red-600 to-blue-600 rounded-2xl p-8 md:p-12 text-white">
+                <h3 class="text-3xl font-bold mb-8 text-center">Our Skills Mix</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="bg-white bg-opacity-20 rounded-lg p-4">
+                        <h4 class="font-semibold mb-2">Engineering</h4>
+                        <ul class="text-sm space-y-1">
+                            <li>• Electrical Engineers</li>
+                            <li>• Mechanical Engineers</li>
+                            <li>• Civil & Structural Engineers</li>
+                            <li>• Renewable Energy Engineers</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white bg-opacity-20 rounded-lg p-4">
+                        <h4 class="font-semibold mb-2">Specialists</h4>
+                        <ul class="text-sm space-y-1">
+                            <li>• Telecommunications/IT Engineers</li>
+                            <li>• Certified Project Managers</li>
+                            <li>• Project Supervisors</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white bg-opacity-20 rounded-lg p-4">
+                        <h4 class="font-semibold mb-2">Technicians</h4>
+                        <ul class="text-sm space-y-1">
+                            <li>• Electrical Technicians</li>
+                            <li>• Mechanical Technicians</li>
+                            <li>• Civil & Structural Technicians</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white bg-opacity-20 rounded-lg p-4">
+                        <h4 class="font-semibold mb-2">Support</h4>
+                        <ul class="text-sm space-y-1">
+                            <li>• Riggers</li>
+                            <li>• General Labour</li>
+                            <li>• Support Staff</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Responsibility Section -->
+    <section class="section-padding bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Social Responsibility</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-red-600 to-blue-600 mx-auto mb-6"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-graduation-cap text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Training & Development</h3>
+                    <p class="text-gray-600 mb-4">
+                        Our company has established a culture of Social Empowerment through training and development of
+                        employees. We focus on developing a new generation of local engineers through comprehensive
+                        training and development programs.
+                    </p>
+                    <p class="text-gray-600">
+                        Through intensive training and education, we ensure our team stays at the forefront of
+                        engineering excellence.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-heart text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Giving Back to Communities</h3>
+                    <p class="text-gray-600 mb-4">
+                        We make every effort to give back to the communities we work in. Our focus is to empower
+                        communities for sustainability and growth.
+                    </p>
+                    <p class="text-gray-600">
+                        The firm serves as an engine for economic growth and social development, ensuring our projects
+                        create lasting positive impact.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Environment, Health & Safety Section -->
+    <section class="section-padding bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Environment, Health & Safety</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-red-600 to-blue-600 mx-auto mb-6"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 rounded-xl p-8">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-leaf text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Environment Management System</h3>
+                    <p class="text-gray-600 mb-4">
+                        Our teams at Fortune Three are cognizant of our need as a company to protect the environment in
+                        which we work. We therefore have a functioning environmental management system that avoids or
+                        minimizes damages to the environment.
+                    </p>
+                    <p class="text-gray-600">
+                        By conducting regular assessments, trainings, and formulating environmental drills, we continue
+                        to enhance our environmental management system.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-8">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-hard-hat text-yellow-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Safety Management System</h3>
+                    <p class="text-gray-600 mb-4">
+                        In order to ensure safety, we have established and improved our safety management system.
+                        Through intensive training and education, the supervision of processes, summary and feedback
+                        systems, we have achieved a closed-loop safety management system.
+                    </p>
+                    <p class="text-gray-600">
+                        We ensure the effective operations of our safety system, protecting all stakeholders in every
+                        project we undertake.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-padding gradient-bg text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Start Your Project?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+                Let's discuss how Fortune Three Engineers can help bring your infrastructure vision to life. Get in
+                touch with our team today.
+            </p>
+            <a href="#contact"
+                class="bg-white text-red-600 px-10 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition shadow-xl inline-block">
+                Contact Us Now
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-red-600 to-blue-600 mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Contact Information -->
+                <div>
+                    <div class="bg-white rounded-xl p-8 shadow-lg mb-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div
+                                    class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-map-marker-alt text-red-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-1">Address</h4>
+                                    <p class="text-gray-600">No: 2238 Arlington Estate<br>Hatfield, Harare<br>Zimbabwe
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div
+                                    class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-phone text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-1">Phone</h4>
+                                    <p class="text-gray-600">+263 242 301 279<br>+263 773 436 391</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div
+                                    class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-envelope text-teal-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-1">Email</h4>
+                                    <p class="text-gray-600">trymore@fortunethreeengineers.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Banking Details -->
+                    <div class="bg-white rounded-xl p-8 shadow-lg">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Banking Details</h3>
+                        <div class="space-y-3 text-sm">
+                            <p><strong>Bank:</strong> FBC</p>
+                            <p><strong>Account Name:</strong> Fortune Three Engineering Pvt Ltd</p>
+                            <p><strong>Account (ZWL):</strong> 1496047350135</p>
+                            <p><strong>Account (USD):</strong> 5196047350236</p>
+                            <p><strong>Branch:</strong> Borrowdale</p>
+                            <p><strong>Branch Code:</strong> 8127</p>
+                            <p><strong>Swift Code:</strong> FBCPZWHA</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h3>
+                    <form id="contact-form" class="space-y-6" onsubmit="handleFormSubmit(event)">
+                        <div>
+                            <label for="name" class="block text-gray-700 font-semibold mb-2">Full Name</label>
+                            <input type="text" id="name" name="name"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent transition"
+                                placeholder="John Doe" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 font-semibold mb-2">Email Address</label>
+                            <input type="email" id="email" name="email"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent transition"
+                                placeholder="john@example.com" required>
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-gray-700 font-semibold mb-2">Phone Number</label>
+                            <input type="tel" id="phone" name="phone"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent transition"
+                                placeholder="+263 77 123 4567">
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-gray-700 font-semibold mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent transition"
+                                placeholder="Project Inquiry" required>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 font-semibold mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent transition resize-none"
+                                placeholder="Tell us about your project..." required></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-red-700 transition shadow-lg transform hover:scale-105">
+                            <i class="fas fa-paper-plane mr-2"></i>Send Message
+                        </button>
+                        <div id="form-message" class="hidden mt-4 p-4 rounded-lg"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="mb-4">
+                        <img src="images/logo/logo.png" alt="Fortune Three Engineers Logo" class="logo-img-footer">
+                    </div>
+                    <p class="text-gray-400 text-sm mb-4">
+                        Engineering Pace Setters. Building Zimbabwe's infrastructure future with excellence, innovation,
+                        and integrity.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-600 transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-600 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-600 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="#projects" class="text-gray-400 hover:text-white transition">Projects</a></li>
+                        <li><a href="#team" class="text-gray-400 hover:text-white transition">Our Team</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Our Services</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li>Electrical Engineering</li>
+                        <li>Mechanical Engineering</li>
+                        <li>Civil & Structural Engineering</li>
+                        <li>Renewable Energy</li>
+                        <li>Telecommunications</li>
+                        <li>Data Centres</li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact Us</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mr-3 mt-1 text-red-600"></i>
+                            <span>No: 2238 Arlington Estate<br>Hatfield, Harare<br>Zimbabwe</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-red-600"></i>
+                            <span>+263 242 301 279</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-mobile-alt mr-3 text-red-600"></i>
+                            <span>+263 773 436 391</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-red-600"></i>
+                            <span>trymore@fortunethreeengineers.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 mt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                        &copy; 2025 Fortune Three Engineers (Pvt) Ltd. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6 text-sm text-gray-400">
+                        <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                        <a href="#" class="hover:text-white transition">Terms of Service</a>
+                        <a href="#" class="hover:text-white transition">Code of Conduct</a>
+                    </div>
+                </div>
+                <div class="mt-4 text-center text-sm text-gray-500">
+                    <p>Company Registration: 9920/2012 | VAT: 220356870 | TIN: 2000923034</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top"
+        class="fixed bottom-8 right-8 w-12 h-12 bg-red-600 text-white rounded-full shadow-lg hover:bg-red-700 transition opacity-0 invisible z-50 flex items-center justify-center">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Close mobile menu when clicking on a link
+        const mobileLinks = document.querySelectorAll('#mobile-menu a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Navbar scroll effect
+        let lastScroll = 0;
+        const navbar = document.querySelector('nav');
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > 100) {
+                navbar.classList.add('shadow-lg');
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
+
+            lastScroll = currentScroll;
+        });
+
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.remove('opacity-0', 'invisible');
+                backToTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopBtn.classList.add('opacity-0', 'invisible');
+                backToTopBtn.classList.remove('opacity-100', 'visible');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Form Submission Handler
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            const form = document.getElementById('contact-form');
+            const formMessage = document.getElementById('form-message');
+            const submitBtn = form.querySelector('button[type="submit"]');
+
+            // Get form data
+            const formData = new FormData(form);
+            const data = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                subject: formData.get('subject'),
+                message: formData.get('message')
+            };
+
+            // Disable submit button
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
+
+            // Simulate form submission (replace with actual API call)
+            setTimeout(() => {
+                formMessage.classList.remove('hidden');
+                formMessage.classList.add('bg-green-100', 'text-green-800', 'border', 'border-green-400');
+                formMessage.innerHTML = '<i class="fas fa-check-circle mr-2"></i>Thank you! Your message has been sent successfully. We will get back to you soon.';
+
+                // Reset form
+                form.reset();
+
+                // Re-enable submit button
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane mr-2"></i>Send Message';
+
+                // Hide message after 5 seconds
+                setTimeout(() => {
+                    formMessage.classList.add('hidden');
+                }, 5000);
+            }, 1500);
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Add fade-in animation class
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            .animate-fade-in {
+                animation: fadeIn 0.6s ease-out forwards;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+
+</html>
