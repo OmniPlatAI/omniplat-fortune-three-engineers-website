@@ -100,18 +100,16 @@
     top: 0;
     left: 0;
     width: 100%;
+    height: 100%;
     opacity: 0;
     transition: opacity 1s ease-in-out;
     will-change: opacity;
-}
-
-.carousel-image[style*="height"] {
-    height: 100%;
+    z-index: 1;
 }
 
 .carousel-image.active {
     opacity: 1;
-    position: relative;
+    z-index: 2;
 }
 
 .carousel-indicators {
@@ -182,14 +180,14 @@
 
 /* Hide images until loaded */
 img[data-src],
-img.lazy-load {
+img.lazy-load:not(.carousel-image) {
     opacity: 0;
     transition: opacity 0.4s ease-in-out;
     will-change: opacity;
 }
 
 /* Show images when loaded */
-img.loaded {
+img.loaded:not(.carousel-image) {
     opacity: 1;
 }
 
