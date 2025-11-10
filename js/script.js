@@ -128,34 +128,73 @@ document.querySelectorAll('section').forEach(section => {
     observer.observe(section);
 });
 
-// Image Carousel Auto-Rotation
+// Image Carousel Auto-Rotation with Professional Navigation
 function initImageCarousels() {
     const carousels = {};
-    const carouselElements = document.querySelectorAll('[data-carousel]');
+    const carouselContainers = document.querySelectorAll('.image-carousel');
 
-    // Group images by carousel name
-    carouselElements.forEach(element => {
-        const carouselName = element.getAttribute('data-carousel');
+    carouselContainers.forEach(container => {
+        const images = container.querySelectorAll('.carousel-image');
+        if (images.length === 0) return;
+
+        const firstImage = images[0];
+        const carouselName = firstImage.getAttribute('data-carousel');
+        
+        if (!carouselName) return;
+
         if (!carousels[carouselName]) {
             carousels[carouselName] = {
-                images: [],
-                indicators: [],
-                currentIndex: 0
+                container: container,
+                images: Array.from(images),
+                indicators: Array.from(container.querySelectorAll('.carousel-indicator')),
+                currentIndex: 0,
+                intervalId: null,
+                progressIntervalId: null,
+                isPaused: false,
+                progressBar: null
             };
-        }
-
-        if (element.classList.contains('carousel-image')) {
-            carousels[carouselName].images.push(element);
-        } else if (element.classList.contains('carousel-indicator')) {
-            carousels[carouselName].indicators.push(element);
         }
     });
 
     // Initialize each carousel
     Object.keys(carousels).forEach(carouselName => {
         const carousel = carousels[carouselName];
+        const container = carousel.container;
 
-        function showImage(index) {
+        // Create navigation arrows if they don't exist
+        if (!container.querySelector('.carousel-nav.prev')) {
+            const prevBtn = document.createElement('button');
+            prevBtn.className = 'carousel-nav prev';
+            prevBtn.setAttribute('data-carousel', carouselName);
+            prevBtn.setAttribute('data-direction', 'prev');
+            prevBtn.innerHTML = '<i class="fas fa-chevron-left"></i>';
+            prevBtn.setAttribute('aria-label', 'Previous image');
+            container.appendChild(prevBtn);
+
+            const nextBtn = document.createElement('button');
+            nextBtn.className = 'carousel-nav next';
+            nextBtn.setAttribute('data-carousel', carouselName);
+            nextBtn.setAttribute('data-direction', 'next');
+            nextBtn.innerHTML = '<i class="fas fa-chevron-right"></i>';
+            nextBtn.setAttribute('aria-label', 'Next image');
+            container.appendChild(nextBtn);
+        }
+
+        // Create progress bar if it doesn't exist
+        if (!container.querySelector('.carousel-progress')) {
+            const progressContainer = document.createElement('div');
+            progressContainer.className = 'carousel-progress';
+            const progressBar = document.createElement('div');
+            progressBar.className = 'carousel-progress-bar';
+            progressBar.setAttribute('data-carousel', carouselName);
+            progressContainer.appendChild(progressBar);
+            container.appendChild(progressContainer);
+            carousel.progressBar = progressBar;
+        } else {
+            carousel.progressBar = container.querySelector('.carousel-progress-bar');
+        }
+
+        function showImage(index, resetProgress = true) {
             // Hide all images
             carousel.images.forEach((img, i) => {
                 img.classList.remove('active');
@@ -170,20 +209,102 @@ function initImageCarousels() {
             });
 
             carousel.currentIndex = index;
+
+            // Reset progress bar
+            if (resetProgress && carousel.progressBar) {
+                carousel.progressBar.style.width = '0%';
+            }
         }
 
-        // Auto-rotate every 5 seconds
-        setInterval(() => {
+        function nextImage() {
             const nextIndex = (carousel.currentIndex + 1) % carousel.images.length;
             showImage(nextIndex);
-        }, 5000);
+        }
+
+        function prevImage() {
+            const prevIndex = (carousel.currentIndex - 1 + carousel.images.length) % carousel.images.length;
+            showImage(prevIndex);
+        }
+
+        function startAutoRotate() {
+            // Clear existing intervals
+            if (carousel.intervalId) clearInterval(carousel.intervalId);
+            if (carousel.progressIntervalId) clearInterval(carousel.progressIntervalId);
+
+            // Auto-rotate every 5 seconds
+            carousel.intervalId = setInterval(() => {
+                if (!carousel.isPaused) {
+                    nextImage();
+                }
+            }, 5000);
+
+            // Progress bar animation
+            if (carousel.progressBar) {
+                carousel.progressBar.style.width = '0%';
+                carousel.progressIntervalId = setInterval(() => {
+                    if (!carousel.isPaused && carousel.progressBar) {
+                        const currentWidth = parseFloat(carousel.progressBar.style.width) || 0;
+                        const increment = (100 / 5000) * 50; // 5000ms = 5 seconds, update every 50ms
+                        if (currentWidth < 100) {
+                            carousel.progressBar.style.width = (currentWidth + increment) + '%';
+                        }
+                    }
+                }, 50);
+            }
+        }
+
+        // Pause on hover
+        container.addEventListener('mouseenter', () => {
+            carousel.isPaused = true;
+        });
+
+        container.addEventListener('mouseleave', () => {
+            carousel.isPaused = false;
+            showImage(carousel.currentIndex, true);
+        });
+
+        // Navigation arrows
+        const prevBtn = container.querySelector('.carousel-nav.prev');
+        const nextBtn = container.querySelector('.carousel-nav.next');
+
+        if (prevBtn) {
+            prevBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                prevImage();
+                startAutoRotate();
+            });
+        }
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                nextImage();
+                startAutoRotate();
+            });
+        }
+
+        // Keyboard navigation
+        container.setAttribute('tabindex', '0');
+        container.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                prevImage();
+                startAutoRotate();
+            } else if (e.key === 'ArrowRight') {
+                nextImage();
+                startAutoRotate();
+            }
+        });
 
         // Allow manual navigation via indicators
         carousel.indicators.forEach((indicator, index) => {
             indicator.addEventListener('click', () => {
                 showImage(index);
+                startAutoRotate();
             });
         });
+
+        // Start auto-rotation
+        startAutoRotate();
     });
 }
 
